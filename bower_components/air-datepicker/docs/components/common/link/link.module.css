@@ -1,0 +1,16 @@
+/* -------------------------------------------------
+    Link
+   ------------------------------------------------- */
+.el {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  border-bottom: 1px solid var(--link-border-color);
+  -webkit-transition: border-color var(--t-duration) var(--t-easing);
+  transition: border-color var(--t-duration) var(--t-easing);
+}
+
+.el:hover {
+  border-bottom-color: var(--link-color);
+}
+/*# sourceMappingURL=link.module.css.map */

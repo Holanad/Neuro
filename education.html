@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuroCare</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="">
+    <base href="">
+    <link rel="canonical" href="">
+    <!-- page description -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="Copyright" content="">
+    <!-- social networks -->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="assets/img/favicon/mstile-144x144.png" />
+    <!-- styles files -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="bower_components/air-datepicker/dist/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-top f-jcsb-center">
+                        <a href="" class="header__logo">
+                            <img src="assets/img/logo.svg" alt="" class="img-contain">
+                        </a>
+                        <button class="header-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="header-info f-center">
+                            <ul class="header-social flex">
+                                <li class="header-social-item">
+                                    <a href="" class="header-social-item__link f-center-center">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5871 4.0601L2.93596 7.49555C2.65488 7.58924 2.68611 7.99525 2.96719 8.08895L5.15339 8.77604L6.02787 11.5244C6.09033 11.743 6.37141 11.8055 6.52757 11.6493L7.80806 10.4625L10.2441 12.2427C10.4315 12.3677 10.6814 12.274 10.7438 12.0553L12.4303 4.80965C12.524 4.27871 12.0555 3.87271 11.5871 4.0601V4.0601ZM6.52757 9.30697L6.24649 10.931L5.62186 8.68234L11.712 4.68472L6.52757 9.30697Z" fill="#056BF1"/>
+                                        </svg>                                            
+                                    </a>
+                                </li>
+                                <li class="header-social-item">
+                                    <a href="" class="header-social-item__link f-center-center">
+                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_502_2253)">
+                                            <path d="M8.74765 4.91786C8.75806 3.6634 7.68969 2.51348 6.36626 2.35428C6.33766 2.35072 6.30917 2.34638 6.28081 2.34127C6.21428 2.32853 6.14682 2.32128 6.0791 2.31958C5.80756 2.31958 5.73512 2.51044 5.71604 2.62365C5.69739 2.73426 5.71517 2.82752 5.76852 2.89996C5.85831 3.02185 6.01664 3.04354 6.14373 3.06089C6.18061 3.0661 6.21574 3.07087 6.24524 3.07738C7.43463 3.34328 7.835 3.761 8.03063 4.94042C8.0354 4.96905 8.03757 5.00461 8.04018 5.04235C8.04885 5.18333 8.0662 5.47656 8.38155 5.47656C8.40758 5.47656 8.43621 5.47439 8.4657 5.47005C8.75893 5.42537 8.74982 5.1573 8.74548 5.02847C8.74418 4.99204 8.74288 4.95777 8.74635 4.93478C8.74704 4.92902 8.74733 4.92322 8.74722 4.91743L8.74765 4.91786Z" fill="white"/>
+                                            <path d="M6.00185 1.89397C6.03742 1.89658 6.07039 1.89918 6.09815 1.90308C8.05141 2.20368 8.94975 3.12892 9.1983 5.09736C9.20264 5.13076 9.20351 5.17154 9.20394 5.21448C9.20654 5.36847 9.21175 5.68859 9.55529 5.6951H9.5657C9.67371 5.6951 9.75917 5.66256 9.82076 5.59837C9.92747 5.48689 9.92053 5.32075 9.91402 5.18715C9.91272 5.15419 9.91142 5.12339 9.91142 5.09606C9.93658 3.08337 8.19369 1.25763 6.18273 1.18997C6.17406 1.18997 6.16625 1.18997 6.15844 1.19127C6.15053 1.19226 6.14256 1.1927 6.13459 1.19257C6.1142 1.19257 6.08991 1.19083 6.06345 1.1891C6.03222 1.18693 5.99621 1.18433 5.95934 1.18433C5.63922 1.18433 5.57849 1.41206 5.57068 1.54783C5.5529 1.86144 5.85611 1.88356 6.00185 1.89397ZM9.10417 7.64142C9.06227 7.60956 9.02077 7.57717 8.97968 7.54426C8.76627 7.37248 8.53941 7.21459 8.32035 7.06147L8.18371 6.96604C7.90263 6.76868 7.65018 6.67281 7.4116 6.67281C7.08975 6.67281 6.80953 6.85066 6.5779 7.20071C6.47553 7.356 6.35104 7.43148 6.19792 7.43148C6.09156 7.42776 5.9872 7.4016 5.89167 7.3547C4.9851 6.94349 4.33704 6.31279 3.9666 5.48038C3.78746 5.07784 3.84558 4.81498 4.1605 4.6007C4.33965 4.47924 4.67235 4.25325 4.64936 3.81991C4.62246 3.32845 3.53761 1.84886 3.08041 1.68099C2.88496 1.6097 2.67072 1.60908 2.47487 1.67926C1.94958 1.8558 1.57306 2.16638 1.38437 2.57629C1.20219 2.97276 1.21087 3.43819 1.4078 3.92228C1.9782 5.32206 2.77981 6.54268 3.79093 7.5499C4.78036 8.53586 5.99665 9.3431 7.40553 9.94994C7.53263 10.0046 7.66579 10.0345 7.76339 10.0562C7.79636 10.0636 7.82499 10.0701 7.84581 10.0757C7.85727 10.0788 7.86907 10.0804 7.88094 10.0805H7.89222C8.55502 10.0805 9.35099 9.47497 9.5952 8.78484C9.80948 8.18016 9.41822 7.8813 9.10417 7.64142ZM6.29508 3.49328C6.18187 3.49588 5.94546 3.50196 5.86261 3.74227C5.82357 3.85505 5.82834 3.95221 5.87649 4.03246C5.94676 4.14958 6.08167 4.18601 6.20399 4.20597C6.6486 4.2771 6.8772 4.52262 6.92275 4.97938C6.944 5.19192 7.08758 5.34071 7.27106 5.34071C7.28498 5.34069 7.29889 5.33982 7.3127 5.3381C7.53393 5.31208 7.64107 5.14942 7.63153 4.85489C7.63499 4.54778 7.4745 4.19903 7.20079 3.92141C6.92665 3.64293 6.59612 3.48591 6.29508 3.49328Z" fill="#056BF1"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_502_2253">
+                                            <rect width="10.4105" height="10.4105" fill="white" transform="translate(0.380615 0.533936)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                            
+                                    </a>
+                                </li>
+                                <li class="header-social-item">
+                                    <a href="" class="header-social-item__link f-center-center">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.54309 1.45341C8.0817 0.991267 7.53278 0.624841 6.92813 0.37536C6.32348 0.12588 5.67512 -0.00169774 5.02059 1.70597e-05C2.27684 1.70597e-05 0.0414225 2.22325 0.0414225 4.95459C0.039343 5.82429 0.268488 6.67905 0.705589 7.43208L-0.000244141 10L2.63976 9.3098C3.36975 9.70567 4.18764 9.91342 5.01892 9.91414H5.02101C7.76517 9.91414 9.99809 7.69132 9.99976 4.95791C9.99976 3.63434 9.48226 2.38999 8.54309 1.453V1.45341ZM5.02059 9.0767H5.01892C4.2779 9.07669 3.55049 8.87858 2.91267 8.50305L2.76142 8.41387L1.19392 8.82243L1.61226 7.30226L1.51476 7.14671C1.10001 6.49017 0.880429 5.73016 0.881423 4.95459C0.881423 2.6849 2.73851 0.837877 5.02226 0.837877C5.56576 0.836525 6.10414 0.94251 6.60622 1.1497C7.1083 1.35688 7.56411 1.66115 7.94726 2.04489C8.33229 2.42679 8.6375 2.88085 8.84525 3.38084C9.05301 3.88083 9.15919 4.41684 9.15767 4.95791C9.15767 7.22967 7.30059 9.0767 5.02017 9.0767H5.02059ZM7.28934 5.99155C7.16559 5.93016 6.55351 5.63068 6.43976 5.59004C6.32601 5.54773 6.24267 5.52823 6.15976 5.65142C6.07642 5.77586 5.83892 6.05501 5.76601 6.13755C5.69434 6.21843 5.62101 6.23005 5.49726 6.16824C5.37226 6.10685 4.97184 5.97537 4.49642 5.55271C4.12684 5.22503 3.87642 4.81854 3.80476 4.69535C3.73142 4.57092 3.79642 4.50455 3.85851 4.44233C3.91517 4.38758 3.98351 4.2984 4.04559 4.2254C4.10726 4.15448 4.12892 4.10263 4.17059 4.01967C4.21142 3.93713 4.19059 3.86413 4.15934 3.80274C4.12851 3.74135 3.87976 3.13038 3.77559 2.88234C3.67434 2.64094 3.57184 2.67495 3.49559 2.67038C3.42392 2.66707 3.34101 2.66707 3.25809 2.66707C3.17476 2.66707 3.03976 2.69776 2.92559 2.82261C2.81184 2.9458 2.49101 3.24569 2.49101 3.85459C2.49101 4.4639 2.93684 5.05331 2.99934 5.13626C3.06101 5.21715 3.87642 6.46772 5.12434 7.00444C5.35558 7.104 5.59203 7.19109 5.83267 7.26534C6.13059 7.35908 6.40226 7.34622 6.61726 7.31512C6.85642 7.27986 7.35267 7.01564 7.45684 6.72571C7.55976 6.43744 7.55976 6.1894 7.52851 6.13755C7.49767 6.0857 7.41476 6.05459 7.28934 5.99155Z" fill="#056BF1"/>
+                                        </svg>                                            
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="" class="header-phone">
+                                <span class="header-phone__number">
+                                    +7 909 635 56 56
+                                </span>
+                                <p class="header-phone__descr">
+                                    Звонок по России бесплатный
+                                </p>
+                            </a>
+                            <button class="header__btn btn btn-transp modal-consult">
+                                Записаться на консультацию
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="header-nav">
+                        <ul>
+                            <li>
+                                <a>
+                                    <span>Программа</span>
+                                    <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.23425 3.76378L0.185912 1.05414C-0.124688 0.778055 0.139552 0.270116 0.543916 0.365965L3.40774 1.0448C3.46841 1.05918 3.53159 1.05918 3.59226 1.0448L6.45608 0.365965C6.86045 0.270116 7.12469 0.778056 6.81409 1.05414L3.76575 3.76378C3.61419 3.8985 3.38581 3.8985 3.23425 3.76378Z" fill="#4B4B4B"/>
+                                    </svg>                                        
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <span>О программе</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>Метод работы</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>Обучение</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>Полезные статьи</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>Кому мы помогаем</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>Специалисты</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>История успеха</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>Услуги и цены</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="breadcrumb">
+                <div class="container">
+                  <div class="breadcrumb-wrapper">
+                    <a href="/" class="breadcrumb-text breadcrumb-main">Главная</a>
+                    <a href="/" class="breadcrumb-text breadcrumb-next">Обучение</a>
+                  </div>
+                </div>
+            </div>
+            <section class="education">
+                <div class="container">
+                    <div class="education-wrapper">
+                        <span class="chapter">Обучение</span>
+                        <h1 class="education__title title">Список вебинаров</h1>   
+                        <ul class="education-list f-dc">
+                            <li class="education-item f-center">
+                                <div class="education-item-image">
+                                    <img src="assets/img/vebinar/img.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="education-item-info">
+                                    <p class="education-item__title">
+                                        Заголовок темы вебинара
+                                    </p>
+                                    <p class="education-item__descr">
+                                        Ответим на ваш запрос в течение 45 минут. Скорость подтверждена опросом наших клиентов.
+                                    </p>
+                                    <div class="education-item-block f-center">
+                                        <span class="education-item__date">
+                                            11.02.2022
+                                        </span>
+                                        <p class="education-item__leader">
+                                            Ведущий вебинара - Дмитриев Дмитрий
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="" class="education-item__btn btn btn-full">
+                                    Подробнее
+                                </a>
+                            </li>
+                            <li class="education-item f-center">
+                                <div class="education-item-image">
+                                    <img src="assets/img/vebinar/img.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="education-item-info">
+                                    <p class="education-item__title">
+                                        Заголовок темы вебинара
+                                    </p>
+                                    <p class="education-item__descr">
+                                        Ответим на ваш запрос в течение 45 минут. Скорость подтверждена опросом наших клиентов.
+                                    </p>
+                                    <div class="education-item-block f-center">
+                                        <span class="education-item__date">
+                                            11.02.2022
+                                        </span>
+                                        <p class="education-item__leader">
+                                            Ведущий вебинара - Дмитриев Дмитрий
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="" class="education-item__btn btn btn-full">
+                                    Подробнее
+                                </a>
+                            </li>
+                            <li class="education-item f-center">
+                                <div class="education-item-image">
+                                    <img src="assets/img/vebinar/img.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="education-item-info">
+                                    <p class="education-item__title">
+                                        Заголовок темы вебинара
+                                    </p>
+                                    <p class="education-item__descr">
+                                        Ответим на ваш запрос в течение 45 минут. Скорость подтверждена опросом наших клиентов.
+                                    </p>
+                                    <div class="education-item-block f-center">
+                                        <span class="education-item__date">
+                                            11.02.2022
+                                        </span>
+                                        <p class="education-item__leader">
+                                            Ведущий вебинара - Дмитриев Дмитрий
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="" class="education-item__btn btn btn-full">
+                                    Подробнее
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="education-nav f-jcsb-center page">
+                            <div class="education-nav-wrapper page-wrapper f-center">
+                                <a href="" class="education-page__btn education-page__btn_prev page__btn f-center-center">
+                                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 1L2 5L6 9" stroke="#056BF1" stroke-width="1.5"/>
+                                    </svg>                                                                            
+                                </a>
+                                <a href="" class="education-page__btn f-center-center page__btn">
+                                    1
+                                </a>
+                                <a href="" class="education-page__btn f-center-center page__btn active">
+                                    2
+                                </a>
+                                <a href="" class="education-page__btn f-center-center page__btn">
+                                    3
+                                </a>
+                                <a href="" class="education-page__btn f-center-center page__btn">
+                                    4
+                                </a>
+                                <span>...</span>
+                                <a href="" class="education-page__btn f-center-center page__btn">
+                                    34
+                                </a>
+                                <a href="" class="education-page__btn education-page__btn_next page__btn f-center-center">
+                                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 9L5 5L1 1" stroke="#056BF1" stroke-width="1.5"/>
+                                    </svg>                                        
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <svg width="1600" height="43" viewBox="0 0 1600 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1600 42.835L1600 -4.19617e-05L-0.000247885 9.79148e-05L-0.000244144 42.791C191.234 34.3608 478.415 29.0001 799.5 29C1121.14 29 1408.77 34.3794 1600 42.835Z" fill="white"/>
+            </svg>  
+           <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-inner f-jcsb">
+                    <div class="footer-main f-dc">
+                        <a href="" class="footer__logo">
+                            <img src="assets/img/logo.svg" alt="" class="img-contain">
+                        </a>
+                        <a href="" class="footer__political">
+                            Политика конфиденциальности
+                        </a>
+                        <div class="footer-social f-center">
+                            <a href="" class="footer-social__link">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9976 4.47172L3.34653 7.90717C3.06545 8.00087 3.09668 8.40687 3.37776 8.50057L5.56396 9.18766L6.43844 11.936C6.5009 12.1546 6.78198 12.2171 6.93814 12.061L8.21863 10.8742L10.6547 12.6543C10.8421 12.7793 11.0919 12.6856 11.1544 12.467L12.8409 5.22127C12.9346 4.69034 12.4661 4.28433 11.9976 4.47172ZM6.93814 9.71859L6.65706 11.3426L6.03243 9.09397L12.1226 5.09634L6.93814 9.71859Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <a href="" class="footer-social__link">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_542_762)">
+                                    <path d="M8.74757 4.91908C8.75798 3.66462 7.6896 2.5147 6.36617 2.3555C6.33757 2.35194 6.30908 2.3476 6.28072 2.34249C6.21419 2.32975 6.14673 2.3225 6.07902 2.3208C5.80748 2.3208 5.73504 2.51166 5.71595 2.62487C5.6973 2.73548 5.71508 2.82875 5.76844 2.90118C5.85823 3.02307 6.01655 3.04476 6.14365 3.06211C6.18052 3.06732 6.21565 3.07209 6.24515 3.0786C7.43455 3.3445 7.83491 3.76222 8.03054 4.94164C8.03532 4.97027 8.03749 5.00584 8.04009 5.04357C8.04876 5.18455 8.06611 5.47778 8.38146 5.47778C8.40749 5.47778 8.43612 5.47561 8.46562 5.47127C8.75884 5.42659 8.74973 5.15852 8.7454 5.02969C8.7441 4.99326 8.74279 4.95899 8.74626 4.936C8.74695 4.93024 8.74724 4.92444 8.74713 4.91865L8.74757 4.91908Z" fill="white"/>
+                                    <path d="M6.00179 1.89519C6.03736 1.8978 6.07032 1.9004 6.09808 1.9043C8.05135 2.20491 8.94969 3.13014 9.19824 5.09858C9.20257 5.13198 9.20344 5.17276 9.20388 5.2157C9.20648 5.36969 9.21168 5.68981 9.55523 5.69632H9.56564C9.67365 5.69632 9.7591 5.66378 9.8207 5.59959C9.9274 5.48811 9.92046 5.32197 9.91396 5.18837C9.91265 5.15541 9.91135 5.12461 9.91135 5.09728C9.93651 3.08459 8.19363 1.25885 6.18267 1.19119C6.17399 1.19119 6.16619 1.19119 6.15838 1.19249C6.15047 1.19349 6.14249 1.19392 6.13452 1.19379C6.11413 1.19379 6.08984 1.19205 6.06338 1.19032C6.03215 1.18815 5.99615 1.18555 5.95928 1.18555C5.63916 1.18555 5.57843 1.41328 5.57062 1.54905C5.55284 1.86266 5.85604 1.88478 6.00179 1.89519ZM9.10411 7.64264C9.0622 7.61078 9.0207 7.57839 8.97962 7.54548C8.7662 7.37371 8.53934 7.21581 8.32029 7.06269L8.18365 6.96726C7.90257 6.7699 7.65011 6.67404 7.41154 6.67404C7.08968 6.67404 6.80947 6.85188 6.57783 7.20193C6.47546 7.35722 6.35097 7.4327 6.19785 7.4327C6.0915 7.42898 5.98714 7.40282 5.89161 7.35592C4.98503 6.94471 4.33698 6.31401 3.96654 5.4816C3.78739 5.07906 3.84552 4.8162 4.16043 4.60192C4.33958 4.48046 4.67228 4.25447 4.64929 3.82113C4.6224 3.32967 3.53754 1.85008 3.08035 1.68221C2.8849 1.61092 2.67066 1.61031 2.47481 1.68048C1.94951 1.85702 1.573 2.1676 1.38431 2.57751C1.20212 2.97398 1.2108 3.43941 1.40773 3.9235C1.97814 5.32328 2.77975 6.5439 3.79086 7.55112C4.78029 8.53708 5.99658 9.34432 7.40547 9.95117C7.53256 10.0058 7.66573 10.0357 7.76333 10.0574C7.79629 10.0648 7.82492 10.0713 7.84574 10.077C7.8572 10.08 7.86901 10.0816 7.88088 10.0817H7.89216C8.55496 10.0817 9.35092 9.47619 9.59514 8.78606C9.80942 8.18138 9.41816 7.88252 9.10411 7.64264ZM6.29502 3.4945C6.1818 3.49711 5.9454 3.50318 5.86255 3.74349C5.82351 3.85627 5.82828 3.95343 5.87643 4.03368C5.9467 4.1508 6.0816 4.18723 6.20392 4.20719C6.64854 4.27832 6.87713 4.52384 6.92268 4.9806C6.94394 5.19314 7.08751 5.34193 7.271 5.34193C7.28492 5.34191 7.29882 5.34104 7.31264 5.33933C7.53386 5.3133 7.641 5.15064 7.63146 4.85611C7.63493 4.549 7.47444 4.20025 7.20073 3.92263C6.92658 3.64415 6.59605 3.48713 6.29502 3.4945Z" fill="#262626"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_542_762">
+                                    <rect width="10.4105" height="10.4105" fill="white" transform="translate(0.380493 0.535156)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                    
+                            </a>
+                            <a href="" class="footer-social__link">
+                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.54304 1.45488C8.08164 0.992731 7.53273 0.626306 6.92808 0.376825C6.32343 0.127345 5.67506 -0.000232898 5.02054 0.0014819C2.27679 0.0014819 0.0413691 2.22471 0.0413691 4.95605C0.0392896 5.82576 0.268434 6.68052 0.705536 7.43355L-0.000297546 10.0015L2.6397 9.31127C3.3697 9.70713 4.18759 9.91489 5.01887 9.91561H5.02095C7.76512 9.91561 9.99804 7.69279 9.9997 4.95937C9.9997 3.6358 9.4822 2.39146 8.54304 1.45446V1.45488ZM5.02054 9.07816H5.01887C4.27785 9.07816 3.55043 8.88004 2.91262 8.50452L2.76137 8.41534L1.19387 8.8239L1.6122 7.30372L1.5147 7.14818C1.09995 6.49164 0.880376 5.73163 0.881369 4.95605C0.881369 2.68637 2.73845 0.839342 5.0222 0.839342C5.56571 0.83799 6.10409 0.943975 6.60617 1.15116C7.10825 1.35835 7.56405 1.66262 7.9472 2.04636C8.33224 2.42826 8.63744 2.88232 8.8452 3.3823C9.05296 3.88229 9.15914 4.4183 9.15762 4.95937C9.15762 7.23114 7.30054 9.07816 5.02012 9.07816H5.02054ZM7.28929 5.99301C7.16554 5.93162 6.55345 5.63215 6.4397 5.5915C6.32595 5.54919 6.24262 5.5297 6.1597 5.65289C6.07637 5.77732 5.83887 6.05647 5.76595 6.13901C5.69429 6.2199 5.62095 6.23151 5.4972 6.16971C5.3722 6.10832 4.97179 5.97683 4.49637 5.55417C4.12679 5.22649 3.87637 4.82001 3.8047 4.69682C3.73137 4.57238 3.79637 4.50602 3.85845 4.4438C3.91512 4.38905 3.98345 4.29987 4.04554 4.22687C4.1072 4.15594 4.12887 4.10409 4.17054 4.02114C4.21137 3.93859 4.19054 3.86559 4.15929 3.8042C4.12845 3.74282 3.8797 3.13184 3.77554 2.8838C3.67429 2.6424 3.57179 2.67641 3.49554 2.67185C3.42387 2.66853 3.34095 2.66853 3.25804 2.66853C3.1747 2.66853 3.0397 2.69923 2.92554 2.82407C2.81179 2.94726 2.49095 3.24715 2.49095 3.85605C2.49095 4.46537 2.93679 5.05477 2.99929 5.13773C3.06095 5.21861 3.87637 6.46918 5.12429 7.00591C5.35552 7.10546 5.59198 7.19256 5.83262 7.26681C6.13054 7.36055 6.4022 7.34769 6.6172 7.31658C6.85637 7.28132 7.35262 7.01711 7.45679 6.72718C7.5597 6.4389 7.5597 6.19086 7.52845 6.13901C7.49762 6.08717 7.4147 6.05606 7.28929 5.99301Z" fill="#262626"/>
+                                </svg>                                    
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="footer-nav">
+                        <p class="footer__title">
+                            Навигация
+                        </p>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    О программе
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Метод работы
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Кому мы помогаем
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Услуги и цены
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Специалисты
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Истории успеха
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer-block">
+                        <p class="footer__title">
+                            Дополнительно
+                        </p>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Обучение
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    Полезные статьи
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-info-item">
+                            <p class="footer-info-item__title">
+                                г. Москва, ул. Профсоюзная, дом 93А
+                            </p>
+                            <span class="footer-info-item__descr">
+                                Местоположение
+                            </span>
+                        </div>
+                        <div class="footer-info-item">
+                            <p class="footer-info-item__title">
+                                с 8:00 до 20:00
+                            </p>
+                            <span class="footer-info-item__descr">
+                                Время работы
+                            </span>
+                        </div>
+                        <a href="" class="footer-info-item">
+                            <p class="footer-info-item__title">
+                                +7 909 635 56 56
+                            </p>
+                            <span class="footer-info-item__descr">
+                                Бесплатная консультация
+                            </span>
+                        </a>
+                        <a href="" class="footer-info-item">
+                            <p class="footer-info-item__title">
+                                info@neurocare.pro
+                            </p>
+                            <span class="footer-info-item__descr">
+                                Корпоративная почта
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer-copy">
+                    NeuroCare © 2022. Все Права Защищены.
+                </p>
+            </div>
+           </div>
+        </footer>
+        <div class="popup-consult duty popup">
+            <div class="popup-consult-wrapper popup-wrapper crop">
+                <form action="" class="popup-consult-form" id="popup-consult">
+                    <div class="popup-consult-block">
+                        <p class="popup-consult__title popup__title">
+                            Выберите специалиста и услугу
+                        </p>
+                        <div class="popup-consult-block-inner f-jcsb">
+                            <div class="popup-consult-select select f-jcsb-center">
+                                <input type="hidden" name="specialist" class="select-input">
+                                <div class="popup-consult-select-elem select-elem f-jcsb-center">
+                                    <p class="popup-consult-select-elem__text select-text">
+                                        Выберите специалиста
+                                    </p>
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.22869 5.74956L0.141409 1.05361C-0.162355 0.773211 0.106915 0.272471 0.508328 0.371281L5.40439 1.57647C5.46719 1.59192 5.53281 1.59192 5.59561 1.57647L10.4917 0.371281C10.8931 0.272472 11.1624 0.77321 10.8586 1.05361L5.77131 5.74956C5.61809 5.891 5.38191 5.891 5.22869 5.74956Z" fill="#056BF1"/>
+                                    </svg> 
+                                </div>                          
+                                <ul class="popup-consult-select-list select-list">
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Специалист 1</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Специалист 2</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Специалист 3</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Специалист 4</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Специалист 5</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="popup-consult-select select">
+                                <input type="hidden" name="service" class="select-input">
+                                <div class="popup-consult-select-elem select-elem f-jcsb-center">
+                                    <p class="popup-consult-select-elem__text select-text">
+                                        Выберите услугу
+                                    </p>
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.22869 5.74956L0.141409 1.05361C-0.162355 0.773211 0.106915 0.272471 0.508328 0.371281L5.40439 1.57647C5.46719 1.59192 5.53281 1.59192 5.59561 1.57647L10.4917 0.371281C10.8931 0.272472 11.1624 0.77321 10.8586 1.05361L5.77131 5.74956C5.61809 5.891 5.38191 5.891 5.22869 5.74956Z" fill="#056BF1"/>
+                                    </svg>  
+                                </div>                              
+                                <ul class="popup-consult-select-list select-list">
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Услуга 1</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Услуга 2</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Услуга 3</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Услуга 4</span>
+                                    </li>
+                                    <li class="popup-consult-select-item select-item">
+                                        <span>Услуга 5</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-consult-block">
+                        <p class="popup-consult__title popup__title">
+                            Оставьте свои контакты и мы свяжемся с вами и ответим на любые вопросы 
+                        </p>
+                        <div class="popup-consult-block-inner f-jcsb">
+                            <div class="popup-consult-elem popup-elem">
+                                <input type="text" class="popup-consult-elem__input popup-elem__input" placeholder="Имя*" name="name">
+                            </div>
+                            <div class="popup-consult-elem popup-elem">
+                                <input type="text" class="popup-consult-elem__input popup-elem__input" placeholder="Номер телефона*" name="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-consult-block">
+                        <p class="popup-consult__title popup__title">
+                            Выберите дату и время
+                        </p>
+                        <div class="popup-consult-block-inner f-jcsb">
+                            <div class="popup-consult-calendar">
+                                <input type="hidden" name="date">
+                            </div>
+                            <div class="popup-consult-time">
+                                <div class="popup-consult-time-block">
+                                    <span class="popup-consult-time-item">
+                                        10:00
+                                    </span>
+                                    <span class="popup-consult-time-item">
+                                        11:00
+                                    </span>
+                                    <span class="popup-consult-time-item">
+                                        12:00
+                                    </span>
+                                    <span class="popup-consult-time-item">
+                                        13:00
+                                    </span>
+                                </div>
+                                <input type="hidden" name="time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-consult-address f-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#056BF1"/>
+                            <g clip-path="url(#clip0_319_2407)">
+                            <path d="M15.1245 12.705C14.7315 13.5015 14.199 14.295 13.6545 15.0075C13.138 15.6792 12.5857 16.3226 12 16.935C11.4143 16.3227 10.862 15.6792 10.3455 15.0075C9.801 14.295 9.2685 13.5015 8.8755 12.705C8.478 11.9002 8.25 11.1465 8.25 10.5C8.25 9.50544 8.64509 8.55161 9.34835 7.84835C10.0516 7.14509 11.0054 6.75 12 6.75C12.9946 6.75 13.9484 7.14509 14.6517 7.84835C15.3549 8.55161 15.75 9.50544 15.75 10.5C15.75 11.1465 15.5213 11.9002 15.1245 12.705ZM12 18C12 18 16.5 13.7355 16.5 10.5C16.5 9.30653 16.0259 8.16193 15.182 7.31802C14.3381 6.47411 13.1935 6 12 6C10.8065 6 9.66193 6.47411 8.81802 7.31802C7.97411 8.16193 7.5 9.30653 7.5 10.5C7.5 13.7355 12 18 12 18Z" fill="white"/>
+                            <path d="M12 12C11.6022 12 11.2206 11.842 10.9393 11.5607C10.658 11.2794 10.5 10.8978 10.5 10.5C10.5 10.1022 10.658 9.72064 10.9393 9.43934C11.2206 9.15804 11.6022 9 12 9C12.3978 9 12.7794 9.15804 13.0607 9.43934C13.342 9.72064 13.5 10.1022 13.5 10.5C13.5 10.8978 13.342 11.2794 13.0607 11.5607C12.7794 11.842 12.3978 12 12 12ZM12 12.75C12.5967 12.75 13.169 12.5129 13.591 12.091C14.0129 11.669 14.25 11.0967 14.25 10.5C14.25 9.90326 14.0129 9.33097 13.591 8.90901C13.169 8.48705 12.5967 8.25 12 8.25C11.4033 8.25 10.831 8.48705 10.409 8.90901C9.98705 9.33097 9.75 9.90326 9.75 10.5C9.75 11.0967 9.98705 11.669 10.409 12.091C10.831 12.5129 11.4033 12.75 12 12.75Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_319_2407">
+                            <rect width="12" height="12" fill="white" transform="translate(6 6)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                        
+                        <p class="popup-consult-address__text">
+                            Московская улица д.45 офис 4506
+                        </p>
+                    </div>
+                    <div class="popup-consult-price f-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#056BF1"/>
+                            <g clip-path="url(#clip0_319_2399)">
+                            <path d="M6 8.25C6 7.85218 6.15804 7.47064 6.43934 7.18934C6.72064 6.90804 7.10218 6.75 7.5 6.75H17.625C17.7245 6.75 17.8198 6.78951 17.8902 6.85983C17.9605 6.93016 18 7.02554 18 7.125C18 7.22446 17.9605 7.31984 17.8902 7.39017C17.8198 7.46049 17.7245 7.5 17.625 7.5H17.25V9C17.4489 9 17.6397 9.07902 17.7803 9.21967C17.921 9.36032 18 9.55109 18 9.75V16.125C18 16.4234 17.8815 16.7095 17.6705 16.9205C17.4595 17.1315 17.1734 17.25 16.875 17.25H7.875C7.37772 17.25 6.90081 17.0525 6.54917 16.7008C6.19754 16.3492 6 15.8723 6 15.375V8.25ZM6.75 9.549V15.375C6.75 15.6734 6.86853 15.9595 7.0795 16.1705C7.29048 16.3815 7.57663 16.5 7.875 16.5H16.875C16.9745 16.5 17.0698 16.4605 17.1402 16.3902C17.2105 16.3198 17.25 16.2245 17.25 16.125V9.75H7.5C7.23664 9.75034 6.97789 9.681 6.75 9.549ZM6.75 8.25C6.75 8.44891 6.82902 8.63968 6.96967 8.78033C7.11032 8.92098 7.30109 9 7.5 9H16.5V7.5H7.5C7.30109 7.5 7.11032 7.57902 6.96967 7.71967C6.82902 7.86032 6.75 8.05109 6.75 8.25Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_319_2399">
+                            <rect width="12" height="12" fill="white" transform="translate(6 6)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                        
+                        <span class="popup-consult-price__text">
+                            4 990₽
+                        </span>
+                    </div>
+                    <label class="popup-consult-checkbox checkbox f-center">
+                        <input type="hidden" checked="">                          
+                        <span class="popup-checkbox__square checkbox-square">
+                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6.58621L4.91204 10L11 1" stroke="#056BF1"/>
+                            </svg>  
+                        </span>
+                        <p class="popup-checkbox__text checkbox__text">
+                            Я согласен на обработку персональных данных
+                        </p>
+                    </label>
+                    <div class="popup-consult-bottom f-center">
+                        <button type="submit" class="popup-consult__submit btn btn-full checkbox-permission">
+                            Записаться на консультацию
+                        </button>
+                        <div class="popup-consult__close btn btn-transp close">
+                            Закрыть
+                        </div>
+                    </div>
+                    <div class="popup-close">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="#056BF1"/>
+                        </svg>                                              
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-recall duty popup">
+            <div class="popup-recall-wrapper crop popup-wrapper">
+                <form action="" class="popup-recall-form" id="popup-recall">
+                    <p class="popup-recall__title popup__title">
+                        Выберите специалиста и услугу
+                    </p>
+                    <div class="popup-recall-elem popup-elem">
+                        <input type="text" class="popup-recall-elem__input popup-elem__input" placeholder="Имя*" name="name">
+                    </div>
+                    <div class="popup-recall-elem popup-elem">
+                        <textarea class="popup-recall-elem__textarea" placeholder="Ваш отзыв" name="recall"></textarea>
+                    </div>
+                    <div class="popup-recall-avatar">
+                        <p class="popup-recall__title popup__title">
+                            Выберите аватарку для отзыва
+                        </p>
+                        <input type="hidden" name="avatar">
+                        <ul class="popup-recall-list flex">
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                            <li class="popup-recall-item">
+                                <div class="popup-recall-item-image">
+                                    <img src="assets/img/avatar/igor.svg" alt="" class="img-cover">
+                                </div>
+                                <div class="popup-recall-item-active">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.25 0.6875L6.4625 14.7469L2.75 11.9281H0.6875L6.4625 21.3125L21.3125 0.6875H19.25Z" fill="white"/>
+                                        <defs>
+                                        <clipPath id="clip0_401_5766">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <label class="popup-recall-checkbox checkbox f-center">
+                        <input type="hidden" checked="">                          
+                        <span class="popup-checkbox__square checkbox-square">
+                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6.58621L4.91204 10L11 1" stroke="#056BF1"/>
+                            </svg>  
+                        </span>
+                        <p class="popup-checkbox__text checkbox__text">
+                            Я согласен на обработку персональных данных
+                        </p>
+                    </label>
+                    <div class="popup-recall-bottom f-center">
+                        <button type="submit" class="popup-recall__submit btn btn-full checkbox-permission">
+                            Оставить отзыв
+                        </button>
+                        <div class="popup-recall__close btn btn-transp close">
+                            Закрыть
+                        </div>
+                    </div>
+                    <div class="popup-close">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="#056BF1"/>
+                        </svg>                                              
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-education duty popup">
+            <div class="popup-education-wrapper crop popup-wrapper">
+                <form action="" class="popup-education-form" id="popup-education">
+                    <p class="popup-education__title popup__title">
+                        Оставьте свои контакты и мы свяжемся с вами и ответим на любые вопросы 
+                    </p>
+                    <div class="popup-education-block f-jcsb">
+                        <div class="popup-education-elem popup-elem">
+                            <input type="text" class="popup-education-elem__input popup-elem__input" placeholder="Имя*" name="name">
+                        </div>
+                        <div class="popup-education-elem popup-elem">
+                            <input type="tel" class="popup-education-elem__input popup-elem__input" placeholder="Телефон*" name="phone">
+                        </div>
+                        <div class="popup-education-elem popup-elem">
+                            <input type="email" class="popup-education-elem__input popup-elem__input" placeholder="Email" name="email">
+                        </div>
+                    </div>
+                    <label class="popup-education-checkbox checkbox f-center">
+                        <input type="hidden" checked="">                          
+                        <span class="popup-education__square checkbox-square">
+                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6.58621L4.91204 10L11 1" stroke="#056BF1"/>
+                            </svg>  
+                        </span>
+                        <p class="popup-checkbox__text checkbox__text">
+                            Я согласен на обработку персональных данных
+                        </p>
+                    </label>
+                    <div class="popup-education-bottom f-center">
+                        <button type="submit" class="popup-education__submit btn btn-full checkbox-permission">
+                            Записаться на вебинар
+                        </button>
+                        <div class="popup-education__close btn btn-transp close">
+                            Закрыть
+                        </div>
+                    </div>
+                    <div class="popup-close">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="#056BF1"/>
+                        </svg>                                              
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-contact duty popup">
+            <div class="popup-contact-wrapper crop popup-wrapper">
+                <form action="" class="popup-contact-form" id="popup-contact">
+                    <p class="popup-contact__title popup__title">
+                        Оставьте свои контакты и мы свяжемся с вами и ответим на любые вопросы 
+                    </p>
+                    <div class="popup-contact-block f-dc">
+                        <div class="popup-contact-elem popup-elem">
+                            <input type="text" class="popup-contact-elem__input popup-elem__input" placeholder="Имя*" name="name">
+                        </div>
+                        <div class="popup-contact-elem popup-elem">
+                            <input type="tel" class="popup-contact-elem__input popup-elem__input" placeholder="Телефон*" name="phone">
+                        </div>
+                        <div class="popup-contact-elem popup-elem">
+                            <input type="email" class="popup-contact-elem__input popup-elem__input" placeholder="Email" name="email">
+                        </div>
+                    </div>
+                    <label class="popup-contact-checkbox checkbox f-center">
+                        <input type="hidden" checked="">                          
+                        <span class="popup-contact__square checkbox-square">
+                            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6.58621L4.91204 10L11 1" stroke="#056BF1"/>
+                            </svg>  
+                        </span>
+                        <p class="popup-checkbox__text checkbox__text">
+                            Я согласен на обработку персональных данных
+                        </p>
+                    </label>
+                    <div class="popup-contact-bottom f-center">
+                        <button class="popup-contact__submit btn btn-full checkbox-permission">
+                            Записаться на вебинар
+                        </button>
+                    </div>
+                    <div class="popup-close">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="#056BF1"/>
+                        </svg>                                              
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- jQuery Validation -->
+        <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+        <!-- Datepicker -->
+        <script src="bower_components/air-datepicker/dist/js/datepicker.js"></script>
+        <!-- YandexMap-->
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=4b99eedd-d416-4d16-881e-df0698ab3590"></script>
+        <script src="assets/js/icon_customImage.js"></script>
+        <!-- app js -->
+        <script src="assets/js/app.js"></script>
+        <!-- CopyScript -->
+    </body>
+</html>

@@ -1,0 +1,19 @@
+/* -------------------------------------------------
+    Version
+   ------------------------------------------------- */
+.el {
+  background: #eee;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 .5em;
+  text-transform: none;
+  height: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=version.module.css.map */

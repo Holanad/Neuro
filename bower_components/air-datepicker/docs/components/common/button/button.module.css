@@ -1,0 +1,57 @@
+/* -------------------------------------------------
+    Button
+   ------------------------------------------------- */
+.el {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: var(--ui-height);
+  border-radius: var(--ui-border-radius);
+  border: none;
+  background: var(--btn-bg);
+  padding: 0 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--ui-font-size);
+  color: var(--btn-color);
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s var(--t-easing);
+  transition: background-color 0.2s var(--t-easing);
+  outline: none;
+}
+
+.el:focus {
+  background: var(--btn-bg-hover);
+}
+
+.el:hover {
+  background: var(--btn-bg-hover);
+}
+
+.el:active {
+  background: var(--btn-bg-active);
+}
+
+.active,
+.active:focus {
+  background: var(--btn-bg-active);
+}
+
+.promo {
+  border-radius: 30px;
+  height: 46px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bordered {
+  border: 1px solid var(--btn-color);
+}
+
+.sizeS {
+  height: var(--ui-height-small);
+  font-size: 13px;
+}
+/*# sourceMappingURL=button.module.css.map */

@@ -1,0 +1,57 @@
+/* -------------------------------------------------
+    Examples module
+   ------------------------------------------------- */
+.positionScroll {
+  height: 600px;
+  overflow: auto;
+}
+
+.positionScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.positionScroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.positionScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.positionScroll {
+  scrollbar-face-color: rgba(0, 0, 0, 0.1);
+  scrollbar-track-color: transparent;
+}
+
+.positionScroll {
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+  scrollbar-width: thin;
+}
+
+.positionContainer {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 290px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animeContainer {
+  height: 350px;
+  padding-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+/*# sourceMappingURL=examples.module.css.map */

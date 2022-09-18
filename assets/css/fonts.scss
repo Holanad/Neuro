@@ -1,0 +1,47 @@
+// fonts
+
+@font-face {
+	font-family: 'Gilroy Regular';
+	src: url("../fonts/Gilroy-Regular.eot");
+	src: local("Gilroy Regular"), local("Gilroy-Regular"), 
+    url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Gilroy-Regular.woff") format("woff"), 
+	url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy Medium';
+	src: url("../fonts/Gilroy-Medium.eot");
+	src: local("Gilroy Semibold"), local("Gilroy-Medium"), 
+    url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Gilroy-Medium.woff") format("woff"), 
+	url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy Semibold';
+	src: url("../fonts/Gilroy-Semibold.eot");
+	src: local("Gilroy Semibold"), local("Gilroy-Semibold"), 
+    url("../fonts/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Gilroy-Semibold.woff") format("woff"), 
+	url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stapel Narrow';
+	src: url("../fonts/Stapel-Narrow.eot");
+	src: local("Stapel Narrow"), local("Stapel-Narrow"), 
+    url("../fonts/Stapel-Narrow.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Stapel-Narrow.woff") format("woff"), 
+	url("../fonts/Stapel-Narrow.woff2") format("woff2"),
+    url("../fonts/Stapel-Narrow.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}

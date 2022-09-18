@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;uDAEuD;AAMvD,AAAA,aAAa,CAAC;EACZ,aAAa,EAAE,GAAI;CACpB",
+    "sources": [
+        "paragraph.module.scss"
+    ],
+    "names": [],
+    "file": "paragraph.module.css"
+}
